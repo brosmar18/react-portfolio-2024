@@ -1,7 +1,6 @@
 import { navLinks } from '../constants/index';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import NavLink from './NavLink';
 import { Link } from 'react-router-dom';
 import { logo } from '../assets/images';
 import { github, linkedin } from '../assets/icons';
@@ -78,7 +77,9 @@ const Navbar = () => {
     <nav className='h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-lg'>
       <div className='hidden md:flex gap-4 w-1/3 z-30'>
         {navLinks.map(link => (
-          <NavLink link={link} key={`nav-link-${link.label}`} />
+          <Link to={link.route} key={`nav-link${link.route}`}>
+            {link.label}
+          </Link>
         ))}
       </div>
       <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center items-center">
