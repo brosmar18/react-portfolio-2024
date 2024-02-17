@@ -1,9 +1,9 @@
 import { navLinks } from '../constants/index';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { logo } from '../assets/images';
-import { github, linkedin } from '../assets/icons';
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -77,23 +77,23 @@ const Navbar = () => {
     <nav className='h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-lg'>
       <div className='hidden md:flex gap-4 w-1/3 z-30'>
         {navLinks.map(link => (
-          <Link to={link.route} key={`nav-link${link.route}`}>
+          <NavLink to={link.route} key={`nav-link${link.route}`} className={({ isActive }) => isActive ? 'rounded p-1 bg-white text-black' : ''}>
             {link.label}
-          </Link>
+          </NavLink>
         ))}
       </div>
       <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center items-center">
-        <Link to='/' className="rounded-full p-1 bg-white flex items-center justify-center">
+        <NavLink to='/' className="rounded-full p-1 bg-white flex items-center justify-center">
           <img src={logo} alt='logo' className='h-10 w-10' />
-        </Link>
+        </NavLink>
       </div>
       <div className='hidden md:flex items-center justify-center gap-4 w-1/3'>
-        <Link to='/'>
-          <img src={github} alt='github' className='rounded-full w-10 h-10' />
-        </Link>
-        <Link to='/'>
-          <img src={linkedin} alt='github' className='rounded-full w-10 h-10' />
-        </Link>
+        <NavLink to='/'>
+          <FaGithub size={30} />
+        </NavLink>
+        <NavLink to='/'>
+          <FaLinkedinIn size={30} />
+        </NavLink>
       </div>
       <div className='md:hidden'>
         <button className='w-10 h-8 flex flex-col justify-between z-50 relative' onClick={() => setOpen(!open)}>
@@ -116,16 +116,16 @@ const Navbar = () => {
             variants={listVariants}
             initial='closed'
             animate='opened'
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-30"
+            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
           >
             {navLinks.map(link => (
               <motion.div
                 key={`link-${link.label}`}
                 variants={listItemVariants}
               >
-                <Link to={link.route}>
+                <NavLink to={link.route}>
                   {link.label}
-                </Link>
+                </NavLink>
               </motion.div>
             ))}
           </motion.div>
