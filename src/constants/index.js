@@ -1,3 +1,13 @@
+import {
+    brewhemia,
+    deltaV,
+    fedEx,
+    mercy,
+    sedgwick,
+    unitypointHealth,
+    doordash
+} from '../assets/icons';
+
 export const navLinks = [
  {
      label: 'Home',
@@ -21,7 +31,7 @@ export const experiences = [
  {
      title: "Kitchen Staff",
      company_name: 'Brewhemia',
-     icon: '/assets/icons/brewhemia.png',
+     icon: brewhemia,
      iconBg: '#fff',
      date: 'Sept 2016 - Oct 2017',
      points: [
@@ -32,7 +42,7 @@ export const experiences = [
  {
      title: "Emergency Technician",
      company_name: 'Unitypoint St. Luke\'s Hospital',
-     icon: '/assets/icons/unitypointHealth.png',
+     icon: unitypointHealth,
      iconBg: '#fff',
      date: 'Sept 2017 - May 2019',
      points: [
@@ -45,7 +55,7 @@ export const experiences = [
  {
      title: "Patient Access Technician",
      company_name: 'Mercy Hospital',
-     icon: '/assets/icons/mercy.png',
+     icon: mercy,
      iconBg: '#fff',
      date: 'Sept 2019 - Nov 2020',
      points: [
@@ -58,7 +68,7 @@ export const experiences = [
  {
      title: "Food Delivery Driver",
      company_name: 'Doordash',
-     icon: '/assets/icons/doordash.png',
+     icon: doordash,
      iconBg: '#fff',
      date: 'Dec 2019 - Present',
      points: [
@@ -72,7 +82,7 @@ export const experiences = [
  {
      title: "Sr. Disability Representative",
      company_name: 'Sedgwick',
-     icon: '/assets/icons/sedgwick.png',
+     icon: sedgwick,
      iconBg: '#fff',
      date: 'Nov 2020 - Dec 2022',
      points: [
@@ -85,7 +95,7 @@ export const experiences = [
  {
      title: "FedEx Delivery Driver",
      company_name: 'FedEx',
-     icon: '/assets/icons/fedEx.png',
+     icon: fedEx,
      iconBg: '#fff',
      date: 'Dec 2022 - March 2023',
      points: [
@@ -99,7 +109,7 @@ export const experiences = [
  {
      title: "Software Development Instructor",
      company_name: 'DeltaV Code School',
-     icon: '/assets/icons/deltaV.png',
+     icon: deltaV,
      iconBg: '#fff',
      date: 'March 2023 - Present',
      points: [
