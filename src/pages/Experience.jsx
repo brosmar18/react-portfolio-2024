@@ -32,10 +32,10 @@ const Experience = () => {
         animate='show'
         variants={textVariant}
       >
-        <p className="uppercase tracking-wider text-center text-white text-lg mb-1 md:text-xl">
+        <p className="uppercase tracking-wider text-center text-dark-text text-lg mb-1 md:text-xl">
           What I&#39;ve done
         </p>
-        <h2 className="text-white text-4xl lg:text-6xl font-bold text-center mb-0">
+        <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-dark-primary to-dark-secondary text-4xl lg:text-6xl font-bold text-center mb-0">
           Work Experience
         </h2>
       </motion.div>

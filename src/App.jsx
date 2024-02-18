@@ -6,7 +6,7 @@ import { Home, Experience, Projects, Contact } from './pages';
 
 const App = () => {
  return (
-  <div className="bg-[#000B2A] text-[#fafafa] h-full">
+  <div className="bg-dark-background text-dark-text h-full">
    <Router>
     <Navbar />
     <Routes>

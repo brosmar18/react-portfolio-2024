@@ -77,22 +77,22 @@ const Navbar = () => {
     <nav className='h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-lg'>
       <div className='hidden md:flex gap-4 w-1/3 z-30'>
         {navLinks.map(link => (
-          <NavLink to={link.route} key={`nav-link${link.route}`} className={({ isActive }) => isActive ? 'rounded p-1 bg-white text-black' : ''}>
+          <NavLink to={link.route} key={`nav-link${link.route}`} className={({ isActive }) => isActive ? 'rounded p-1 bg-dark-accent text-black' : ''}>
             {link.label}
           </NavLink>
         ))}
       </div>
       <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center items-center">
-        <NavLink to='/' className="rounded-full p-1 bg-white flex items-center justify-center">
-          <img src={logo} alt='logo' className='h-10 w-10' />
+        <NavLink to='/' className="rounded-full p-1 flex items-center justify-center">
+          <img src={logo} alt='logo' className='h-[60px] w-[60px]' />
         </NavLink>
       </div>
       <div className='hidden md:flex items-center justify-center gap-4 w-1/3'>
         <NavLink to='/'>
-          <FaGithub size={30} />
+          <FaGithub size={30}  className='text-dark-accent'/>
         </NavLink>
         <NavLink to='/'>
-          <FaLinkedinIn size={30} />
+          <FaLinkedinIn size={30} className='text-dark-accent' />
         </NavLink>
       </div>
       <div className='md:hidden'>
@@ -116,14 +116,14 @@ const Navbar = () => {
             variants={listVariants}
             initial='closed'
             animate='opened'
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+            className="absolute top-0 left-0 w-screen h-screen bg-dark-background text-dark-text flex flex-col items-center justify-center gap-8 text-4xl z-40"
           >
             {navLinks.map(link => (
               <motion.div
                 key={`link-${link.label}`}
                 variants={listItemVariants}
               >
-                <NavLink to={link.route}>
+                <NavLink to={link.route} onClick={() => setOpen(false)}>
                   {link.label}
                 </NavLink>
               </motion.div>
