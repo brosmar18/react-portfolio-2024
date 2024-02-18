@@ -77,7 +77,7 @@ const Navbar = () => {
     <nav className='h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-lg'>
       <div className='hidden md:flex gap-4 w-1/3 z-30'>
         {navLinks.map(link => (
-          <NavLink to={link.route} key={`nav-link${link.route}`} className={({ isActive }) => isActive ? 'rounded p-1 bg-dark-accent text-black' : ''}>
+          <NavLink to={link.route} key={`nav-link${link.route}`} className={({ isActive }) => isActive ? 'rounded-lg p-1 bg-dark-accent text-black' : ''}>
             {link.label}
           </NavLink>
         ))}
