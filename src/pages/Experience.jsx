@@ -46,6 +46,7 @@ const Experience = () => {
               key={`exp-timeline-${experience.company_name}`}
               contentArrowStyle={{ borderRight: `7px solid ${experience.border}` }}
               date={experience.date}
+              dateClassName='text-white'
               iconStyle={{ background: experience.iconBg }}
               icon={
                 <div className='flex justify-center items-center w-full h-full '>
