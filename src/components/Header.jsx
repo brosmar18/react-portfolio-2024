@@ -3,9 +3,9 @@ import { hero } from '../assets/images';
 
 const Header = () => {
   return (
-    <header className='flex flex-col gap-10 items-center justify-between lg:flex-row lg:gap-0'>
-      <img src={hero} alt="profile" className="h-[400px] md:h-[600px] z-30" />
-      <div className="w-1/2 flex flex-col gap-8 items-center justify-center">
+    <header className='flex flex-col gap-10 items-center justify-around lg:flex-row lg:gap-10 w-full'>
+      <img src={hero} alt="profile" className="h-[400px] md:h-[500px] z-30" />
+      <div className=" w-[350px] lg:w-[700px] flex flex-col gap-8 items-center justify-center">
         <h1 className="text-3xl lg:text-5xl font-bold "> Developing Seamless
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-dark-secondary to-dark-accent">
             {' '} Solutions, {' '}
