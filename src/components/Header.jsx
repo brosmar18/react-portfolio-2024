@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { hero } from '../assets/images';
+import { profile } from '../assets/images';
 
 const Header = () => {
   return (
-    <header className='flex flex-col gap-10 items-center justify-around lg:flex-row lg:gap-10 w-full'>
-      <img src={hero} alt="profile" className="h-[400px] md:h-[500px] z-30" />
+    <header className='flex flex-col gap-10 items-center justify-around lg:flex-row lg:gap-10 w-full h-full'>
+      <img src={profile} alt="profile" className="h-[300px] sm:h-[400px] md:h-[500px] z-30" />
       <div className=" w-[350px] lg:w-[700px] flex flex-col gap-8 items-center justify-center">
         <h1 className="text-3xl lg:text-5xl font-bold "> Developing Seamless
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-dark-secondary to-dark-accent">
