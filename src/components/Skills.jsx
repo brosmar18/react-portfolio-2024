@@ -13,21 +13,21 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8 h-full">
-      <h2 className="text-3xl font-bold text-center mb-6">Skills</h2>
-      <div className="flex flex-wrap justify-center items-center">
+    <div className="sm:px-16 px-6 sm:py-16 py-10 max-w-7xl mx-auto relative z-0 h-screen">
+      <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Tools Used</p>
+      <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">My Skills</h2>
+      <div className="mt-16 flex flex-wrap gap-12">
         {skills.map((skill) => (
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5 }}
-            className="w-1/2 sm:w-1/4 p-4 flex flex-col items-center"
-            key={skill.name}
-          >
-            <div className="w-20 h-20 rounded-full p-2 flex items-center justify-center" style={{ backgroundColor: '#fff' }}>
-              <img src={urlFor(skill.icon)} alt={skill.name} />
+          <div className="block-container w-20 h-20" key={skill.name}>
+            <div className="btn-back rounded-xl" />
+            <div className="btn-front rounded-xl flex justify-center items-center">
+              <img
+                src={urlFor(skill.icon)}
+                alt={skill.name}
+                className="w-[80%] h-[80%] object-contain"
+              />
             </div>
-            <p className="mt-2 text-sm font-medium">{skill.name}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
