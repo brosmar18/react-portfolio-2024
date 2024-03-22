@@ -3,7 +3,7 @@ import { profile } from '../assets/images';
 
 const Header = () => {
   return (
-    <header className='flex flex-col gap-10 items-center justify-around lg:flex-row lg:gap-10 w-full h-full'>
+    <header className='flex flex-col gap-10 items-center justify-around lg:flex-row lg:gap-10 w-full h-screen'>
       <img src={profile} alt="profile" className="h-[300px] sm:h-[400px] md:h-[500px] z-30" />
       <div className=" w-[350px] lg:w-[700px] flex flex-col gap-8 items-center justify-center">
         <h1 className="text-3xl lg:text-5xl font-bold "> Developing Seamless
